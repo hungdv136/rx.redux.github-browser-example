@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C64562B9D7B8436A0BB76E1 /* Pods_rx_redux_github_browser_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AAE1B765DBA6CA4BA01158 /* Pods_rx_redux_github_browser_example.framework */; };
+		7C14726B1DF64B750053C7FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1472691DF64B750053C7FC /* LaunchScreen.storyboard */; };
+		7C14727A1DF64C000053C7FC /* Actions in Resources */ = {isa = PBXBuildFile; fileRef = 7C1472721DF64C000053C7FC /* Actions */; };
+		7C14727B1DF64C000053C7FC /* Extensions in Resources */ = {isa = PBXBuildFile; fileRef = 7C1472731DF64C000053C7FC /* Extensions */; };
+		7C14727C1DF64C000053C7FC /* Reducers in Resources */ = {isa = PBXBuildFile; fileRef = 7C1472741DF64C000053C7FC /* Reducers */; };
+		7C14727D1DF64C000053C7FC /* Routes in Resources */ = {isa = PBXBuildFile; fileRef = 7C1472751DF64C000053C7FC /* Routes */; };
+		7C14727E1DF64C000053C7FC /* Services in Resources */ = {isa = PBXBuildFile; fileRef = 7C1472761DF64C000053C7FC /* Services */; };
+		7C14727F1DF64C000053C7FC /* State in Resources */ = {isa = PBXBuildFile; fileRef = 7C1472771DF64C000053C7FC /* State */; };
+		7C1472801DF64C000053C7FC /* ViewControllers in Resources */ = {isa = PBXBuildFile; fileRef = 7C1472781DF64C000053C7FC /* ViewControllers */; };
+		7C1472811DF64C000053C7FC /* Views in Resources */ = {isa = PBXBuildFile; fileRef = 7C1472791DF64C000053C7FC /* Views */; };
+		7C1472831DF64C110053C7FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472821DF64C110053C7FC /* AppDelegate.swift */; };
+		7C1472901DF6506F0053C7FC /* AuthenticationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14728D1DF6506F0053C7FC /* AuthenticationActions.swift */; };
+		7C1472911DF6506F0053C7FC /* BookmarkActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14728E1DF6506F0053C7FC /* BookmarkActions.swift */; };
+		7C1472921DF6506F0053C7FC /* RepositoryActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14728F1DF6506F0053C7FC /* RepositoryActions.swift */; };
+		7C1472961DF650990053C7FC /* NavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472941DF650990053C7FC /* NavigationControllerExtensions.swift */; };
+		7C1472971DF650990053C7FC /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472951DF650990053C7FC /* TableViewExtensions.swift */; };
+		7C14729C1DF650AA0053C7FC /* AuthenticationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472991DF650AA0053C7FC /* AuthenticationReducer.swift */; };
+		7C14729D1DF650AA0053C7FC /* BookmarkReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14729A1DF650AA0053C7FC /* BookmarkReducer.swift */; };
+		7C14729E1DF650AA0053C7FC /* RepositoryReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14729B1DF650AA0053C7FC /* RepositoryReducer.swift */; };
+		7C1472A31DF650B90053C7FC /* LoginViewRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472A01DF650B90053C7FC /* LoginViewRoutable.swift */; };
+		7C1472A41DF650B90053C7FC /* MainViewRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472A11DF650B90053C7FC /* MainViewRoutable.swift */; };
+		7C1472A51DF650B90053C7FC /* RootViewRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472A21DF650B90053C7FC /* RootViewRoutable.swift */; };
+		7C1472A91DF650D60053C7FC /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472A71DF650D60053C7FC /* AuthenticationService.swift */; };
+		7C1472AA1DF650D60053C7FC /* BookmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472A81DF650D60053C7FC /* BookmarkService.swift */; };
+		7C1472B11DF651020053C7FC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472AC1DF651020053C7FC /* AppState.swift */; };
+		7C1472B21DF651020053C7FC /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472AD1DF651020053C7FC /* AuthenticationState.swift */; };
+		7C1472B41DF651020053C7FC /* ItemSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472AF1DF651020053C7FC /* ItemSection.swift */; };
+		7C1472B51DF651020053C7FC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472B01DF651020053C7FC /* Repository.swift */; };
+		7C1472BB1DF651170053C7FC /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472B71DF651170053C7FC /* BookmarkViewController.swift */; };
+		7C1472BC1DF651170053C7FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472B81DF651170053C7FC /* LoginViewController.swift */; };
+		7C1472BD1DF651170053C7FC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472B91DF651170053C7FC /* MainViewController.swift */; };
+		7C1472BE1DF651170053C7FC /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472BA1DF651170053C7FC /* RepositoryDetailViewController.swift */; };
+		7C1472C21DF6512A0053C7FC /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472C01DF6512A0053C7FC /* BookmarkTableViewCell.swift */; };
+		7C1472C31DF6512A0053C7FC /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472C11DF6512A0053C7FC /* RepositoryTableViewCell.swift */; };
+		7C1472D21DF6A6D30053C7FC /* TokenConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472D11DF6A6D30053C7FC /* TokenConfiguration.swift */; };
+		7C1472D41DF6A9EE0053C7FC /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472D31DF6A9EE0053C7FC /* Defines.swift */; };
+		7C1472D61DF6BB9A0053C7FC /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472D51DF6BB9A0053C7FC /* Loading.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7C14725D1DF64B750053C7FC /* rx.redux.github-browser-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rx.redux.github-browser-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C14726A1DF64B750053C7FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7C14726C1DF64B750053C7FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C1472721DF64C000053C7FC /* Actions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Actions; path = "/Users/neogov/Desktop/GitHub/ChuCuoi/rx.redux.github-browser-example/rx.redux.github-browser-example/Actions"; sourceTree = "<absolute>"; };
+		7C1472731DF64C000053C7FC /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Extensions; path = "/Users/neogov/Desktop/GitHub/ChuCuoi/rx.redux.github-browser-example/rx.redux.github-browser-example/Extensions"; sourceTree = "<absolute>"; };
+		7C1472741DF64C000053C7FC /* Reducers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Reducers; path = "/Users/neogov/Desktop/GitHub/ChuCuoi/rx.redux.github-browser-example/rx.redux.github-browser-example/Reducers"; sourceTree = "<absolute>"; };
+		7C1472751DF64C000053C7FC /* Routes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Routes; path = "/Users/neogov/Desktop/GitHub/ChuCuoi/rx.redux.github-browser-example/rx.redux.github-browser-example/Routes"; sourceTree = "<absolute>"; };
+		7C1472761DF64C000053C7FC /* Services */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Services; path = "/Users/neogov/Desktop/GitHub/ChuCuoi/rx.redux.github-browser-example/rx.redux.github-browser-example/Services"; sourceTree = "<absolute>"; };
+		7C1472771DF64C000053C7FC /* State */ = {isa = PBXFileReference; lastKnownFileType = folder; name = State; path = "/Users/neogov/Desktop/GitHub/ChuCuoi/rx.redux.github-browser-example/rx.redux.github-browser-example/State"; sourceTree = "<absolute>"; };
+		7C1472781DF64C000053C7FC /* ViewControllers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ViewControllers; path = "/Users/neogov/Desktop/GitHub/ChuCuoi/rx.redux.github-browser-example/rx.redux.github-browser-example/ViewControllers"; sourceTree = "<absolute>"; };
+		7C1472791DF64C000053C7FC /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Views; path = "/Users/neogov/Desktop/GitHub/ChuCuoi/rx.redux.github-browser-example/rx.redux.github-browser-example/Views"; sourceTree = "<absolute>"; };
+		7C1472821DF64C110053C7FC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7C14728D1DF6506F0053C7FC /* AuthenticationActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationActions.swift; path = Actions/AuthenticationActions.swift; sourceTree = "<group>"; };
+		7C14728E1DF6506F0053C7FC /* BookmarkActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookmarkActions.swift; path = Actions/BookmarkActions.swift; sourceTree = "<group>"; };
+		7C14728F1DF6506F0053C7FC /* RepositoryActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryActions.swift; path = Actions/RepositoryActions.swift; sourceTree = "<group>"; };
+		7C1472941DF650990053C7FC /* NavigationControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationControllerExtensions.swift; path = Extensions/NavigationControllerExtensions.swift; sourceTree = "<group>"; };
+		7C1472951DF650990053C7FC /* TableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewExtensions.swift; path = Extensions/TableViewExtensions.swift; sourceTree = "<group>"; };
+		7C1472991DF650AA0053C7FC /* AuthenticationReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationReducer.swift; path = Reducers/AuthenticationReducer.swift; sourceTree = "<group>"; };
+		7C14729A1DF650AA0053C7FC /* BookmarkReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookmarkReducer.swift; path = Reducers/BookmarkReducer.swift; sourceTree = "<group>"; };
+		7C14729B1DF650AA0053C7FC /* RepositoryReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryReducer.swift; path = Reducers/RepositoryReducer.swift; sourceTree = "<group>"; };
+		7C1472A01DF650B90053C7FC /* LoginViewRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewRoutable.swift; path = Routes/LoginViewRoutable.swift; sourceTree = "<group>"; };
+		7C1472A11DF650B90053C7FC /* MainViewRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewRoutable.swift; path = Routes/MainViewRoutable.swift; sourceTree = "<group>"; };
+		7C1472A21DF650B90053C7FC /* RootViewRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewRoutable.swift; path = Routes/RootViewRoutable.swift; sourceTree = "<group>"; };
+		7C1472A71DF650D60053C7FC /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationService.swift; path = Services/AuthenticationService.swift; sourceTree = "<group>"; };
+		7C1472A81DF650D60053C7FC /* BookmarkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookmarkService.swift; path = Services/BookmarkService.swift; sourceTree = "<group>"; };
+		7C1472AC1DF651020053C7FC /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppState.swift; path = State/AppState.swift; sourceTree = "<group>"; };
+		7C1472AD1DF651020053C7FC /* AuthenticationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationState.swift; path = State/AuthenticationState.swift; sourceTree = "<group>"; };
+		7C1472AF1DF651020053C7FC /* ItemSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemSection.swift; path = State/ItemSection.swift; sourceTree = "<group>"; };
+		7C1472B01DF651020053C7FC /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = State/Repository.swift; sourceTree = "<group>"; };
+		7C1472B71DF651170053C7FC /* BookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookmarkViewController.swift; path = ViewControllers/BookmarkViewController.swift; sourceTree = "<group>"; };
+		7C1472B81DF651170053C7FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
+		7C1472B91DF651170053C7FC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
+		7C1472BA1DF651170053C7FC /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryDetailViewController.swift; path = ViewControllers/RepositoryDetailViewController.swift; sourceTree = "<group>"; };
+		7C1472C01DF6512A0053C7FC /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookmarkTableViewCell.swift; path = Views/BookmarkTableViewCell.swift; sourceTree = "<group>"; };
+		7C1472C11DF6512A0053C7FC /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryTableViewCell.swift; path = Views/RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		7C1472D11DF6A6D30053C7FC /* TokenConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenConfiguration.swift; sourceTree = "<group>"; };
+		7C1472D31DF6A9EE0053C7FC /* Defines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
+		7C1472D51DF6BB9A0053C7FC /* Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		A403276758BD11AF04D3C4B4 /* Pods-rx.redux.github-browser-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rx.redux.github-browser-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rx.redux.github-browser-example/Pods-rx.redux.github-browser-example.debug.xcconfig"; sourceTree = "<group>"; };
+		B8AAE1B765DBA6CA4BA01158 /* Pods_rx_redux_github_browser_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rx_redux_github_browser_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52A114EB0AEC020BC26BFF0 /* Pods-rx.redux.github-browser-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rx.redux.github-browser-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-rx.redux.github-browser-example/Pods-rx.redux.github-browser-example.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7C14725A1DF64B750053C7FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C64562B9D7B8436A0BB76E1 /* Pods_rx_redux_github_browser_example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35D60875969EFE7697F535A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A403276758BD11AF04D3C4B4 /* Pods-rx.redux.github-browser-example.debug.xcconfig */,
+				F52A114EB0AEC020BC26BFF0 /* Pods-rx.redux.github-browser-example.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		72895356172E961FA7DF90FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8AAE1B765DBA6CA4BA01158 /* Pods_rx_redux_github_browser_example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C1472541DF64B750053C7FC = {
+			isa = PBXGroup;
+			children = (
+				7C14725F1DF64B750053C7FC /* rx.redux.github-browser-example */,
+				7C14725E1DF64B750053C7FC /* Products */,
+				35D60875969EFE7697F535A5 /* Pods */,
+				72895356172E961FA7DF90FF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7C14725E1DF64B750053C7FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C14725D1DF64B750053C7FC /* rx.redux.github-browser-example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C14725F1DF64B750053C7FC /* rx.redux.github-browser-example */ = {
+			isa = PBXGroup;
+			children = (
+				7C1472BF1DF6511D0053C7FC /* Views */,
+				7C1472B61DF651060053C7FC /* ViewControllers */,
+				7C1472A61DF650C60053C7FC /* Services */,
+				7C1472AB1DF650F80053C7FC /* State */,
+				7C14729F1DF650AD0053C7FC /* Routes */,
+				7C1472981DF6509C0053C7FC /* Reducers */,
+				7C14728C1DF650620053C7FC /* Actions */,
+				7C1472931DF650890053C7FC /* Extensions */,
+				7C1472821DF64C110053C7FC /* AppDelegate.swift */,
+				7C1472D31DF6A9EE0053C7FC /* Defines.swift */,
+				7C1472691DF64B750053C7FC /* LaunchScreen.storyboard */,
+				7C14726C1DF64B750053C7FC /* Info.plist */,
+			);
+			path = "rx.redux.github-browser-example";
+			sourceTree = "<group>";
+		};
+		7C14728C1DF650620053C7FC /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				7C14728D1DF6506F0053C7FC /* AuthenticationActions.swift */,
+				7C14728E1DF6506F0053C7FC /* BookmarkActions.swift */,
+				7C14728F1DF6506F0053C7FC /* RepositoryActions.swift */,
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
+		7C1472931DF650890053C7FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C1472941DF650990053C7FC /* NavigationControllerExtensions.swift */,
+				7C1472951DF650990053C7FC /* TableViewExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		7C1472981DF6509C0053C7FC /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				7C1472991DF650AA0053C7FC /* AuthenticationReducer.swift */,
+				7C14729A1DF650AA0053C7FC /* BookmarkReducer.swift */,
+				7C14729B1DF650AA0053C7FC /* RepositoryReducer.swift */,
+			);
+			name = Reducers;
+			sourceTree = "<group>";
+		};
+		7C14729F1DF650AD0053C7FC /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				7C1472A01DF650B90053C7FC /* LoginViewRoutable.swift */,
+				7C1472A11DF650B90053C7FC /* MainViewRoutable.swift */,
+				7C1472A21DF650B90053C7FC /* RootViewRoutable.swift */,
+			);
+			name = Routes;
+			sourceTree = "<group>";
+		};
+		7C1472A61DF650C60053C7FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7C1472A71DF650D60053C7FC /* AuthenticationService.swift */,
+				7C1472A81DF650D60053C7FC /* BookmarkService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		7C1472AB1DF650F80053C7FC /* State */ = {
+			isa = PBXGroup;
+			children = (
+				7C1472AC1DF651020053C7FC /* AppState.swift */,
+				7C1472AD1DF651020053C7FC /* AuthenticationState.swift */,
+				7C1472AF1DF651020053C7FC /* ItemSection.swift */,
+				7C1472B01DF651020053C7FC /* Repository.swift */,
+				7C1472D11DF6A6D30053C7FC /* TokenConfiguration.swift */,
+			);
+			name = State;
+			sourceTree = "<group>";
+		};
+		7C1472B61DF651060053C7FC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C1472B81DF651170053C7FC /* LoginViewController.swift */,
+				7C1472B91DF651170053C7FC /* MainViewController.swift */,
+				7C1472BA1DF651170053C7FC /* RepositoryDetailViewController.swift */,
+				7C1472B71DF651170053C7FC /* BookmarkViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7C1472BF1DF6511D0053C7FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7C1472C01DF6512A0053C7FC /* BookmarkTableViewCell.swift */,
+				7C1472C11DF6512A0053C7FC /* RepositoryTableViewCell.swift */,
+				7C1472D51DF6BB9A0053C7FC /* Loading.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7C14725C1DF64B750053C7FC /* rx.redux.github-browser-example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C14726F1DF64B750053C7FC /* Build configuration list for PBXNativeTarget "rx.redux.github-browser-example" */;
+			buildPhases = (
+				6245C0AF0D66E9A921097EAB /* [CP] Check Pods Manifest.lock */,
+				7C1472591DF64B750053C7FC /* Sources */,
+				7C14725A1DF64B750053C7FC /* Frameworks */,
+				7C14725B1DF64B750053C7FC /* Resources */,
+				316695CFD82F203DFC234E9E /* [CP] Embed Pods Frameworks */,
+				AA269B2EB19D80CCE60A2639 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "rx.redux.github-browser-example";
+			productName = "rx.redux.github-browser-example";
+			productReference = 7C14725D1DF64B750053C7FC /* rx.redux.github-browser-example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C1472551DF64B750053C7FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = ChuCuoi;
+				TargetAttributes = {
+					7C14725C1DF64B750053C7FC = {
+						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7C1472581DF64B750053C7FC /* Build configuration list for PBXProject "rx.redux.github-browser-example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7C1472541DF64B750053C7FC;
+			productRefGroup = 7C14725E1DF64B750053C7FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7C14725C1DF64B750053C7FC /* rx.redux.github-browser-example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7C14725B1DF64B750053C7FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C14727D1DF64C000053C7FC /* Routes in Resources */,
+				7C14727A1DF64C000053C7FC /* Actions in Resources */,
+				7C1472801DF64C000053C7FC /* ViewControllers in Resources */,
+				7C14726B1DF64B750053C7FC /* LaunchScreen.storyboard in Resources */,
+				7C14727C1DF64C000053C7FC /* Reducers in Resources */,
+				7C14727B1DF64C000053C7FC /* Extensions in Resources */,
+				7C14727F1DF64C000053C7FC /* State in Resources */,
+				7C14727E1DF64C000053C7FC /* Services in Resources */,
+				7C1472811DF64C000053C7FC /* Views in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		316695CFD82F203DFC234E9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rx.redux.github-browser-example/Pods-rx.redux.github-browser-example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6245C0AF0D66E9A921097EAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA269B2EB19D80CCE60A2639 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rx.redux.github-browser-example/Pods-rx.redux.github-browser-example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C1472591DF64B750053C7FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C1472BC1DF651170053C7FC /* LoginViewController.swift in Sources */,
+				7C1472BD1DF651170053C7FC /* MainViewController.swift in Sources */,
+				7C14729D1DF650AA0053C7FC /* BookmarkReducer.swift in Sources */,
+				7C1472911DF6506F0053C7FC /* BookmarkActions.swift in Sources */,
+				7C1472B41DF651020053C7FC /* ItemSection.swift in Sources */,
+				7C1472BE1DF651170053C7FC /* RepositoryDetailViewController.swift in Sources */,
+				7C14729E1DF650AA0053C7FC /* RepositoryReducer.swift in Sources */,
+				7C1472BB1DF651170053C7FC /* BookmarkViewController.swift in Sources */,
+				7C1472AA1DF650D60053C7FC /* BookmarkService.swift in Sources */,
+				7C1472961DF650990053C7FC /* NavigationControllerExtensions.swift in Sources */,
+				7C1472D61DF6BB9A0053C7FC /* Loading.swift in Sources */,
+				7C1472B21DF651020053C7FC /* AuthenticationState.swift in Sources */,
+				7C1472A41DF650B90053C7FC /* MainViewRoutable.swift in Sources */,
+				7C1472B11DF651020053C7FC /* AppState.swift in Sources */,
+				7C1472831DF64C110053C7FC /* AppDelegate.swift in Sources */,
+				7C1472901DF6506F0053C7FC /* AuthenticationActions.swift in Sources */,
+				7C1472B51DF651020053C7FC /* Repository.swift in Sources */,
+				7C1472A31DF650B90053C7FC /* LoginViewRoutable.swift in Sources */,
+				7C1472921DF6506F0053C7FC /* RepositoryActions.swift in Sources */,
+				7C1472971DF650990053C7FC /* TableViewExtensions.swift in Sources */,
+				7C1472A51DF650B90053C7FC /* RootViewRoutable.swift in Sources */,
+				7C1472A91DF650D60053C7FC /* AuthenticationService.swift in Sources */,
+				7C14729C1DF650AA0053C7FC /* AuthenticationReducer.swift in Sources */,
+				7C1472D41DF6A9EE0053C7FC /* Defines.swift in Sources */,
+				7C1472C31DF6512A0053C7FC /* RepositoryTableViewCell.swift in Sources */,
+				7C1472D21DF6A6D30053C7FC /* TokenConfiguration.swift in Sources */,
+				7C1472C21DF6512A0053C7FC /* BookmarkTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7C1472691DF64B750053C7FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C14726A1DF64B750053C7FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7C14726D1DF64B750053C7FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7C14726E1DF64B750053C7FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7C1472701DF64B750053C7FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A403276758BD11AF04D3C4B4 /* Pods-rx.redux.github-browser-example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "rx.redux.github-browser-example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ChuCuoi.rx-redux-github-browser-example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7C1472711DF64B750053C7FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F52A114EB0AEC020BC26BFF0 /* Pods-rx.redux.github-browser-example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "rx.redux.github-browser-example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ChuCuoi.rx-redux-github-browser-example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7C1472581DF64B750053C7FC /* Build configuration list for PBXProject "rx.redux.github-browser-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C14726D1DF64B750053C7FC /* Debug */,
+				7C14726E1DF64B750053C7FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C14726F1DF64B750053C7FC /* Build configuration list for PBXNativeTarget "rx.redux.github-browser-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C1472701DF64B750053C7FC /* Debug */,
+				7C1472711DF64B750053C7FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7C1472551DF64B750053C7FC /* Project object */;
+}
