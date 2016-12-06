@@ -43,7 +43,7 @@
 		7C1472C31DF6512A0053C7FC /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472C11DF6512A0053C7FC /* RepositoryTableViewCell.swift */; };
 		7C1472D21DF6A6D30053C7FC /* TokenConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472D11DF6A6D30053C7FC /* TokenConfiguration.swift */; };
 		7C1472D41DF6A9EE0053C7FC /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472D31DF6A9EE0053C7FC /* Defines.swift */; };
-		7C1472D61DF6BB9A0053C7FC /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472D51DF6BB9A0053C7FC /* Loading.swift */; };
+		7C1472D81DF6CCD30053C7FC /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472D71DF6CCD30053C7FC /* Loading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,7 +84,7 @@
 		7C1472C11DF6512A0053C7FC /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryTableViewCell.swift; path = Views/RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		7C1472D11DF6A6D30053C7FC /* TokenConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenConfiguration.swift; sourceTree = "<group>"; };
 		7C1472D31DF6A9EE0053C7FC /* Defines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
-		7C1472D51DF6BB9A0053C7FC /* Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		7C1472D71DF6CCD30053C7FC /* Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Loading.swift; path = Views/Loading.swift; sourceTree = "<group>"; };
 		A403276758BD11AF04D3C4B4 /* Pods-rx.redux.github-browser-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rx.redux.github-browser-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rx.redux.github-browser-example/Pods-rx.redux.github-browser-example.debug.xcconfig"; sourceTree = "<group>"; };
 		B8AAE1B765DBA6CA4BA01158 /* Pods_rx_redux_github_browser_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rx_redux_github_browser_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52A114EB0AEC020BC26BFF0 /* Pods-rx.redux.github-browser-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rx.redux.github-browser-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-rx.redux.github-browser-example/Pods-rx.redux.github-browser-example.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,9 +230,9 @@
 		7C1472BF1DF6511D0053C7FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7C1472D71DF6CCD30053C7FC /* Loading.swift */,
 				7C1472C01DF6512A0053C7FC /* BookmarkTableViewCell.swift */,
 				7C1472C11DF6512A0053C7FC /* RepositoryTableViewCell.swift */,
-				7C1472D51DF6BB9A0053C7FC /* Loading.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -377,7 +377,7 @@
 				7C1472BB1DF651170053C7FC /* BookmarkViewController.swift in Sources */,
 				7C1472AA1DF650D60053C7FC /* BookmarkService.swift in Sources */,
 				7C1472961DF650990053C7FC /* NavigationControllerExtensions.swift in Sources */,
-				7C1472D61DF6BB9A0053C7FC /* Loading.swift in Sources */,
+				7C1472D81DF6CCD30053C7FC /* Loading.swift in Sources */,
 				7C1472B21DF651020053C7FC /* AuthenticationState.swift in Sources */,
 				7C1472A41DF650B90053C7FC /* MainViewRoutable.swift in Sources */,
 				7C1472B11DF651020053C7FC /* AppState.swift in Sources */,
