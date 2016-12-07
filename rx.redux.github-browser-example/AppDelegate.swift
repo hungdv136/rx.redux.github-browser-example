@@ -11,7 +11,7 @@ import RxRedux
 import RxReduxRouter
 
 private let reducer = CombinedReducer(reducers: NavigationReducer<AppState>(), AuthenticationReducer(), RepositoryReducer())
-let store = Store<AppState>(state: AppState(), reducer: reducer, middlewares: [ThunkMiddleware()])
+let store = Store<AppState>(state: AppState(), reducer: reducer, middlewares: [ThunkMiddleware(), LoggingMiddleware()])
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -40,6 +40,8 @@
 		7C1472D81DF6CCD30053C7FC /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472D71DF6CCD30053C7FC /* LoadingIndicatorView.swift */; };
 		7C77938A1DF7F49F00B27C5B /* RxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7793891DF7F49F00B27C5B /* RxTableViewController.swift */; };
 		7C77938C1DF7F77900B27C5B /* TokenConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C77938B1DF7F77900B27C5B /* TokenConfiguration.swift */; };
+		7C7793951DF8193800B27C5B /* LoggingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7793941DF8193800B27C5B /* LoggingMiddleware.swift */; };
+		7C7793971DF81B6300B27C5B /* PersistenceMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7793961DF81B6300B27C5B /* PersistenceMiddleware.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,8 @@
 		7C1472D71DF6CCD30053C7FC /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingIndicatorView.swift; path = Views/LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		7C7793891DF7F49F00B27C5B /* RxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewController.swift; sourceTree = "<group>"; };
 		7C77938B1DF7F77900B27C5B /* TokenConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenConfiguration.swift; path = State/TokenConfiguration.swift; sourceTree = "<group>"; };
+		7C7793941DF8193800B27C5B /* LoggingMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingMiddleware.swift; sourceTree = "<group>"; };
+		7C7793961DF81B6300B27C5B /* PersistenceMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceMiddleware.swift; sourceTree = "<group>"; };
 		A403276758BD11AF04D3C4B4 /* Pods-rx.redux.github-browser-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rx.redux.github-browser-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rx.redux.github-browser-example/Pods-rx.redux.github-browser-example.debug.xcconfig"; sourceTree = "<group>"; };
 		B8AAE1B765DBA6CA4BA01158 /* Pods_rx_redux_github_browser_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rx_redux_github_browser_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52A114EB0AEC020BC26BFF0 /* Pods-rx.redux.github-browser-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rx.redux.github-browser-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-rx.redux.github-browser-example/Pods-rx.redux.github-browser-example.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,8 +139,9 @@
 				7C1472BF1DF6511D0053C7FC /* Views */,
 				7C1472B61DF651060053C7FC /* ViewControllers */,
 				7C1472A61DF650C60053C7FC /* Services */,
-				7C1472AB1DF650F80053C7FC /* State */,
 				7C14729F1DF650AD0053C7FC /* Routes */,
+				7C7793931DF818FC00B27C5B /* Middlewares */,
+				7C1472AB1DF650F80053C7FC /* State */,
 				7C1472981DF6509C0053C7FC /* Reducers */,
 				7C14728C1DF650620053C7FC /* Actions */,
 				7C1472931DF650890053C7FC /* Extensions */,
@@ -196,11 +201,11 @@
 		7C1472AB1DF650F80053C7FC /* State */ = {
 			isa = PBXGroup;
 			children = (
-				7C77938B1DF7F77900B27C5B /* TokenConfiguration.swift */,
 				7C1472AC1DF651020053C7FC /* AppState.swift */,
 				7C1472AD1DF651020053C7FC /* AuthenticationState.swift */,
 				7C1472AF1DF651020053C7FC /* ItemSection.swift */,
 				7C1472B01DF651020053C7FC /* Repository.swift */,
+				7C77938B1DF7F77900B27C5B /* TokenConfiguration.swift */,
 			);
 			name = State;
 			sourceTree = "<group>";
@@ -223,6 +228,15 @@
 				7C1472C11DF6512A0053C7FC /* RepositoryTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		7C7793931DF818FC00B27C5B /* Middlewares */ = {
+			isa = PBXGroup;
+			children = (
+				7C7793941DF8193800B27C5B /* LoggingMiddleware.swift */,
+				7C7793961DF81B6300B27C5B /* PersistenceMiddleware.swift */,
+			);
+			name = Middlewares;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +383,8 @@
 				7C1472831DF64C110053C7FC /* AppDelegate.swift in Sources */,
 				7C1472901DF6506F0053C7FC /* AuthenticationActions.swift in Sources */,
 				7C1472B51DF651020053C7FC /* Repository.swift in Sources */,
+				7C7793951DF8193800B27C5B /* LoggingMiddleware.swift in Sources */,
+				7C7793971DF81B6300B27C5B /* PersistenceMiddleware.swift in Sources */,
 				7C77938C1DF7F77900B27C5B /* TokenConfiguration.swift in Sources */,
 				7C1472A31DF650B90053C7FC /* LoginViewRoutable.swift in Sources */,
 				7C1472921DF6506F0053C7FC /* RepositoryActions.swift in Sources */,
