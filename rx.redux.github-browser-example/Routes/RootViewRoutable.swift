@@ -12,7 +12,6 @@ import RxReduxRouter
 let loginRoute = "loginRoute"
 let oAuthRoute = "oAuthRoute"
 let mainViewRoute = "mainViewRoute"
-let bookmarkRoute = "bookmarkRoute"
 let repositoryDetailRoute = "repositoryDetailRoute"
 
 
@@ -53,9 +52,9 @@ final class RootRoutable: Routable {
     }
     
     private func setToMainViewController(completion: @escaping RoutingCompletionHandler) -> Routable {
-        window.rootViewController = UINavigationController(rootViewController: MainViewController())
+        window.rootViewController = UINavigationController(rootViewController: RepositoriesViewController())
         completion()
-        return MainViewRoutable(window.rootViewController!)
+        return RepositoriesViewRoutable(window.rootViewController!)
     }
     
     private let window: UIWindow

@@ -1,5 +1,5 @@
 //
-//  MainViewRoutable.swift
+//  RepositoriesViewRoutable.swift
 //  rx.redux.github-browser-example
 //
 //  Created by Hung Dinh on 12/02/16.
@@ -9,7 +9,7 @@
 import RxRedux
 import RxReduxRouter
 
-final class MainViewRoutable: Routable {
+final class RepositoriesViewRoutable: Routable {
     
     let viewController: UIViewController
     
@@ -26,28 +26,8 @@ final class MainViewRoutable: Routable {
             navController.pushViewController(RepositoryDetailViewController(), animated: true, completion: completion)
             return RepositoryDetailRoutable()
         }
-        else if routeElementId == bookmarkRoute {
-            navController.pushViewController(BookmarkViewController(), animated: true, completion: completion)
-            return BookmarkRoutable()
-        }
         
         fatalError("Cannot handle this route change!")
-    }
-    
-    func changeRouteSegment(_ from: String, to: String, animated: Bool, completion: @escaping RoutingCompletionHandler) -> Routable {
-        guard from == bookmarkRoute && to == repositoryDetailRoute else {
-            fatalError("Cannot handle this route change")
-        }
-        
-        guard let navController = (viewController as? UINavigationController) else {
-            fatalError("The root controller should be UINavigationController")
-        }
-        
-        navController.popViewController(true) {
-            navController.pushViewController(RepositoryDetailViewController(), animated: true, completion: completion)
-        }
-        
-        return BookmarkRoutable()
     }
     
     func popRouteSegment(_ routeElementId: String, animated: Bool, completion: @escaping RoutingCompletionHandler) {

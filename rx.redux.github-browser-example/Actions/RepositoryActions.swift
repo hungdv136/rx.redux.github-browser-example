@@ -18,16 +18,16 @@ enum RepositoryAction: Action {
 }
 
 struct RepositoryActionCreator {
-    func fetchGitHubRepositories(_ completion: ((Error?) -> Void)? = nil) -> (GetState, DispatchFunction) -> Void {
+    func fetchGitHubRepositories(_ completion: ((Error?) -> Void)? = nil) -> (@escaping GetState, @escaping DispatchFunction) -> Void {
         return { getState, dispatch in
             guard let state = getState() as? AppState, let authState = state.authenticationState  else { return }
             guard case let LoggedInState.loggedIn(configuration) = authState.loggedInState  else { return }
             
-             _ = store.dispatch(RepositoryAction.startFetching)
+            _ = dispatch(RepositoryAction.startFetching)
             
-            _ = Octokit(configuration).repositories { response in
+            _ = Octokit(configuration).repositories(owner: "gaearon") { response in
                 DispatchQueue.main.async {
-                    _ = store.dispatch(RepositoryAction.endFetching)
+                    _ = dispatch(RepositoryAction.endFetching)
                 }
                 
                 switch response {
@@ -36,7 +36,7 @@ struct RepositoryActionCreator {
                     
                 case .success(let repositories):
                     DispatchQueue.main.async {
-                        _ = store.dispatch(RepositoryAction.setRepostories(repositories: repositories))
+                        _ = dispatch(RepositoryAction.setRepostories(repositories: repositories))
                     }
                     completion?(nil)
                 }

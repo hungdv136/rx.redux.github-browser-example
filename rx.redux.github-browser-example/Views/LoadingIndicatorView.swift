@@ -8,29 +8,29 @@
 
 import UIKit
 
-protocol Loading {
+protocol LoadingIndicatorView {
     var loadingActivityBackgroundColor: UIColor? { get }
 }
 
-extension Loading {
+extension LoadingIndicatorView {
     var loadingActivityBackgroundColor: UIColor? {
         return nil
     }
 }
 
-extension Loading where Self: UIViewController {
+extension LoadingIndicatorView where Self: UIViewController {
     func addLoadingActivity(inTableView tableView: UITableView) {
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         footerView.backgroundColor = loadingActivityBackgroundColor
         let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         footerView.addSubview(spinner)
         spinner.autoCenterInSuperview()
-        tableView.tableHeaderView = footerView
+        tableView.tableFooterView = footerView
         spinner.startAnimating()
     }
     
     func removeLoadingActivity(fromTableView tableView: UITableView) {
-       tableView.tableHeaderView = nil
+       tableView.tableFooterView = nil
     }
     
     func updateLoadingActivity(inTableView tableView: UITableView, showActivity: Bool) {
@@ -43,7 +43,7 @@ extension Loading where Self: UIViewController {
     }
 }
 
-extension Loading where Self: UITableViewController {
+extension LoadingIndicatorView where Self: UITableViewController {
     func addLoadingActivity() {
         addLoadingActivity(inTableView: tableView)
     }

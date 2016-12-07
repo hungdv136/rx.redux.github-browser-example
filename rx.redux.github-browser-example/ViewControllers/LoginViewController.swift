@@ -13,16 +13,12 @@ import RxSwift
 import PureLayout
 
 final class LoginViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        setupSubviews()
-    }
-    
-    private func setupSubviews() {
+        
         let button = UIButton(type: .system)
-        button.setTitle(NSLocalizedString("Authenticate", comment: ""), for: .normal)
+        button.setTitle(NSLocalizedString("Authenticate with GitHub", comment: ""), for: .normal)
         view.addSubview(button)
         
         NSLayoutConstraint.autoCreateAndInstallConstraints {

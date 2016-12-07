@@ -17,7 +17,6 @@ struct AppState: StateType, HasNavigationState {
     var authenticationState: AuthenticationState? = nil
     var navigationState = NavigationState()
     var repositories = [Repository]()
-    var bookmarks = [Bookmark]()
     
     
     // MARK: UI State
@@ -25,4 +24,3 @@ struct AppState: StateType, HasNavigationState {
     var isFectchingRepositories = false
 }
 
-typealias Bookmark = (route: [String], routeSpecificData: Any?)

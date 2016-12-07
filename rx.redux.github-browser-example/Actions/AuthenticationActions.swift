@@ -11,7 +11,7 @@ import RxReduxRouter
 import Octokit
 
 struct AuthenticateActionCreator {
-    func authenticateUser() -> (GetState, DispatchFunction) -> Void {
+    func authenticateUser() -> (@escaping GetState, @escaping DispatchFunction) -> Void {
         return { getState, dispatch in
             guard let state = getState() as? AppState, let config = state.authenticationState?.oAuthConfig else { return }
             
@@ -24,14 +24,14 @@ struct AuthenticateActionCreator {
         }
     }
     
-    func handleOpenURL(url: URL) -> (GetState, DispatchFunction) -> Void {
+    func handleOpenURL(url: URL) -> (@escaping GetState, @escaping DispatchFunction) -> Void {
         return { getState, dispatch in
             guard let state = getState() as? AppState else { return }
             
             state.authenticationState?.oAuthConfig?.handleOpenURL(url: url) { (config: TokenConfiguration) in
                 AuthenticationService().saveAuthenticationData(config)
-                store.dispatch(AuthenticationAction.updateLoggedInState(loggedInState: .loggedIn(config)))
-                store.dispatch(NavigationActions.setRouteAction(route: [mainViewRoute], animated: true))
+                _ = dispatch(AuthenticationAction.updateLoggedInState(loggedInState: .loggedIn(config)))
+                _ = dispatch(NavigationActions.setRouteAction(route: [mainViewRoute], animated: true))
             }
         }
     }

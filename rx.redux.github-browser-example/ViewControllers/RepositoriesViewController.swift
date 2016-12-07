@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  RepositoriesViewController.swift
 //  rx.redux.github-browser-example
 //
 //  Created by Hung Dinh on 12/02/16.
@@ -14,17 +14,16 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-final class MainViewController: UITableViewController, Loading {
+final class RepositoriesViewController: RxTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        title = NSLocalizedString("GitHub", comment: "")
         setupTableView()
         setupDataBinding()
     }
     
     private func setupTableView() {
         tableView.registerCell(RepositoryTableViewCell.self)
-        tableView.dataSource = nil
         
         dataSource.configureCell = { _, tv, ip, model in
             let cell: RepositoryTableViewCell = tv.dequeueReusableCell(forIndexPath: ip)
@@ -45,18 +44,19 @@ final class MainViewController: UITableViewController, Loading {
             print("Can not load repositories \(error)")
         })
         
-        store.state.map { $0.isFectchingRepositories }
-        .distinctUntilChanged().drive(onNext: { [weak self] isFetching in
+        store.state.map { $0.isFectchingRepositories }.distinctUntilChanged().drive(onNext: { [weak self] isFetching in
             self?.updateLoadingActivity(showActivity: isFetching)
         }).addDisposableTo(disposeBag)
         
-        store.state.map { [ItemSection<Repository>(header: "", items: $0.repositories)] }
+        Driver.combineLatest(searchBar.rx.text.asDriver(), store.state.map{ $0.repositories }) { (text, repositories) -> [Repository] in
+            guard let text = text, !text.isEmpty else { return repositories}
+            return repositories.filter { $0.name?.localizedCaseInsensitiveContains(text) ?? false }
+        }.map { [ItemSection<Repository>(header: "" , items: $0)] }
         .drive(tableView.rx.items(dataSource: dataSource)).addDisposableTo(disposeBag)
     }
 
     // MARK: Properties
     
-    private let disposeBag = DisposeBag()
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<ItemSection<Repository>>()
     private lazy var repositoryActionCreator = RepositoryActionCreator()
 }
