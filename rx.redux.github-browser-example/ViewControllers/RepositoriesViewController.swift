@@ -18,7 +18,9 @@ final class RepositoriesViewController: RxTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("GitHub", comment: "")
+        refreshRepositories()
         setupTableView()
+        setupRefreshControl()
         setupDataBinding()
     }
     
@@ -38,12 +40,14 @@ final class RepositoriesViewController: RxTableViewController {
         }).addDisposableTo(disposeBag)
     }
     
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl?.rx.controlEvent(.valueChanged).subscribe(onNext: { [weak self] in
+            self?.refreshRepositories()
+        }).addDisposableTo(disposeBag)
+    }
+    
     private func setupDataBinding() {
-        store.dispatch(repositoryActionCreator.fetchGitHubRepositories() { error in
-            guard let error = error else { return }
-            print("Can not load repositories \(error)")
-        })
-        
         store.state.map { $0.isFectchingRepositories }.distinctUntilChanged().drive(onNext: { [weak self] isFetching in
             self?.updateLoadingActivity(showActivity: isFetching)
         }).addDisposableTo(disposeBag)
@@ -53,6 +57,14 @@ final class RepositoriesViewController: RxTableViewController {
             return repositories.filter { $0.name?.localizedCaseInsensitiveContains(text) ?? false }
         }.map { [ItemSection<Repository>(header: "" , items: $0)] }
         .drive(tableView.rx.items(dataSource: dataSource)).addDisposableTo(disposeBag)
+    }
+    
+    private func refreshRepositories() {
+        store.dispatch(repositoryActionCreator.fetchGitHubRepositories() { error in
+            self.refreshControl?.endRefreshing()
+            guard let error = error else { return }
+            print("Can not load repositories \(error)")
+        })
     }
 
     // MARK: Properties
