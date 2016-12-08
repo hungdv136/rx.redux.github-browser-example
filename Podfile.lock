@@ -1,8 +1,17 @@
 PODS:
+  - CocoaLumberjack (2.4.0):
+    - CocoaLumberjack/Default (= 2.4.0)
+    - CocoaLumberjack/Extensions (= 2.4.0)
+  - CocoaLumberjack/Core (2.4.0)
+  - CocoaLumberjack/Default (2.4.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.4.0):
+    - CocoaLumberjack/Default
   - NBNRequestKit (2.0.0)
   - OctoKit.swift (0.7.0):
     - NBNRequestKit (~> 2.0)
   - PureLayout (3.0.2)
+  - Reachability (3.2)
   - RxCocoa (3.0.1):
     - RxSwift (~> 3.0)
   - RxDataSources (1.0.0):
@@ -15,6 +24,56 @@ PODS:
     - RxRedux (~> 0.1.0)
   - RxSwift (3.0.1)
   - SAMKeychain (1.5.2)
+  - YapDatabase (2.9.2):
+    - YapDatabase/Standard (= 2.9.2)
+  - YapDatabase/Standard (2.9.2):
+    - YapDatabase/Standard/Core (= 2.9.2)
+    - YapDatabase/Standard/Extensions (= 2.9.2)
+  - YapDatabase/Standard/Core (2.9.2):
+    - CocoaLumberjack (~> 2)
+  - YapDatabase/Standard/Extensions (2.9.2):
+    - YapDatabase/Standard/Core
+    - YapDatabase/Standard/Extensions/ActionManager (= 2.9.2)
+    - YapDatabase/Standard/Extensions/CloudKit (= 2.9.2)
+    - YapDatabase/Standard/Extensions/ConnectionProxy (= 2.9.2)
+    - YapDatabase/Standard/Extensions/CrossProcessNotification (= 2.9.2)
+    - YapDatabase/Standard/Extensions/FilteredViews (= 2.9.2)
+    - YapDatabase/Standard/Extensions/FullTextSearch (= 2.9.2)
+    - YapDatabase/Standard/Extensions/Hooks (= 2.9.2)
+    - YapDatabase/Standard/Extensions/Relationships (= 2.9.2)
+    - YapDatabase/Standard/Extensions/RTreeIndex (= 2.9.2)
+    - YapDatabase/Standard/Extensions/SearchResults (= 2.9.2)
+    - YapDatabase/Standard/Extensions/SecondaryIndex (= 2.9.2)
+    - YapDatabase/Standard/Extensions/Views (= 2.9.2)
+  - YapDatabase/Standard/Extensions/ActionManager (2.9.2):
+    - Reachability (~> 3)
+    - YapDatabase/Standard/Core
+    - YapDatabase/Standard/Extensions/Views
+  - YapDatabase/Standard/Extensions/CloudKit (2.9.2):
+    - YapDatabase/Standard/Core
+  - YapDatabase/Standard/Extensions/ConnectionProxy (2.9.2):
+    - YapDatabase/Standard/Core
+  - YapDatabase/Standard/Extensions/CrossProcessNotification (2.9.2):
+    - YapDatabase/Standard/Core
+  - YapDatabase/Standard/Extensions/FilteredViews (2.9.2):
+    - YapDatabase/Standard/Core
+    - YapDatabase/Standard/Extensions/Views
+  - YapDatabase/Standard/Extensions/FullTextSearch (2.9.2):
+    - YapDatabase/Standard/Core
+  - YapDatabase/Standard/Extensions/Hooks (2.9.2):
+    - YapDatabase/Standard/Core
+  - YapDatabase/Standard/Extensions/Relationships (2.9.2):
+    - YapDatabase/Standard/Core
+  - YapDatabase/Standard/Extensions/RTreeIndex (2.9.2):
+    - YapDatabase/Standard/Core
+  - YapDatabase/Standard/Extensions/SearchResults (2.9.2):
+    - YapDatabase/Standard/Core
+    - YapDatabase/Standard/Extensions/FullTextSearch
+    - YapDatabase/Standard/Extensions/Views
+  - YapDatabase/Standard/Extensions/SecondaryIndex (2.9.2):
+    - YapDatabase/Standard/Core
+  - YapDatabase/Standard/Extensions/Views (2.9.2):
+    - YapDatabase/Standard/Core
 
 DEPENDENCIES:
   - OctoKit.swift
@@ -25,6 +84,7 @@ DEPENDENCIES:
   - RxReduxRouter (from `https://github.com/hungdv136/rx.redux-router.git`)
   - RxSwift (~> 3.0)
   - SAMKeychain
+  - YapDatabase
 
 EXTERNAL SOURCES:
   RxRedux:
@@ -34,23 +94,26 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   RxRedux:
-    :commit: 98ad5aa195fbb4c4d8409434ba11d53e258fb618
+    :commit: 0337658ef3e1f9c6c8b848360ce2349b984fd775
     :git: https://github.com/hungdv136/rx.redux.git
   RxReduxRouter:
     :commit: 31e40eed1935a54f645f1d64df46d2748da169fa
     :git: https://github.com/hungdv136/rx.redux-router.git
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: aa9dcab71bdf9eaf2a63bbd9ddc87863efe45457
   NBNRequestKit: 88df01aaeedd6454cebde0b81360f871e4022bed
   OctoKit.swift: 6cfaa3ee9c14d7de4cb5737e4a24172c3c698daa
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
   RxDataSources: 824693e84d00781d0a5e5cedc1ff95ce9250aacd
   RxRedux: 5bcc9d81f4eb9b40e1785e1cd03dcd2e5fcde4ea
   RxReduxRouter: e3da2a5bf1dba6cf448d35f1ee7c783d1c7ffcb4
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
+  YapDatabase: b1e43555a34a5298e23a045be96817a5ef0da58f
 
-PODFILE CHECKSUM: 8587caa8708274fcc322f062942fe5d22897f0a9
+PODFILE CHECKSUM: 997b4b950cba280c196407f9cc1a3cfe390c5996
 
 COCOAPODS: 1.1.1

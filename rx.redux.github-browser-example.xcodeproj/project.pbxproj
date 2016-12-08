@@ -31,17 +31,20 @@
 		7C1472B11DF651020053C7FC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472AC1DF651020053C7FC /* AppState.swift */; };
 		7C1472B21DF651020053C7FC /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472AD1DF651020053C7FC /* AuthenticationState.swift */; };
 		7C1472B41DF651020053C7FC /* ItemSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472AF1DF651020053C7FC /* ItemSection.swift */; };
-		7C1472B51DF651020053C7FC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472B01DF651020053C7FC /* Repository.swift */; };
+		7C1472B51DF651020053C7FC /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472B01DF651020053C7FC /* GitHubRepository.swift */; };
 		7C1472BC1DF651170053C7FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472B81DF651170053C7FC /* LoginViewController.swift */; };
 		7C1472BD1DF651170053C7FC /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472B91DF651170053C7FC /* RepositoriesViewController.swift */; };
 		7C1472BE1DF651170053C7FC /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472BA1DF651170053C7FC /* RepositoryDetailViewController.swift */; };
 		7C1472C31DF6512A0053C7FC /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472C11DF6512A0053C7FC /* RepositoryTableViewCell.swift */; };
 		7C1472D41DF6A9EE0053C7FC /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472D31DF6A9EE0053C7FC /* Defines.swift */; };
 		7C1472D81DF6CCD30053C7FC /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1472D71DF6CCD30053C7FC /* LoadingIndicatorView.swift */; };
-		7C77938A1DF7F49F00B27C5B /* RxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7793891DF7F49F00B27C5B /* RxTableViewController.swift */; };
+		7C3E4F021DF95893009A5A54 /* RxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E4F011DF95893009A5A54 /* RxTableViewController.swift */; };
+		7C3E4F051DF958DB009A5A54 /* LoggingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E4F031DF958DB009A5A54 /* LoggingMiddleware.swift */; };
+		7C3E4F061DF958DB009A5A54 /* PersistenceMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E4F041DF958DB009A5A54 /* PersistenceMiddleware.swift */; };
+		7C3E4F091DF9590A009A5A54 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E4F081DF9590A009A5A54 /* Database.swift */; };
+		7C3E4F0D1DF967E9009A5A54 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E4F0C1DF967E9009A5A54 /* Codable.swift */; };
+		7C3E4F0F1DF971A8009A5A54 /* LaunchActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E4F0E1DF971A8009A5A54 /* LaunchActions.swift */; };
 		7C77938C1DF7F77900B27C5B /* TokenConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C77938B1DF7F77900B27C5B /* TokenConfiguration.swift */; };
-		7C7793951DF8193800B27C5B /* LoggingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7793941DF8193800B27C5B /* LoggingMiddleware.swift */; };
-		7C7793971DF81B6300B27C5B /* PersistenceMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7793961DF81B6300B27C5B /* PersistenceMiddleware.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,17 +73,20 @@
 		7C1472AC1DF651020053C7FC /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppState.swift; path = State/AppState.swift; sourceTree = "<group>"; };
 		7C1472AD1DF651020053C7FC /* AuthenticationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationState.swift; path = State/AuthenticationState.swift; sourceTree = "<group>"; };
 		7C1472AF1DF651020053C7FC /* ItemSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemSection.swift; path = State/ItemSection.swift; sourceTree = "<group>"; };
-		7C1472B01DF651020053C7FC /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = State/Repository.swift; sourceTree = "<group>"; };
+		7C1472B01DF651020053C7FC /* GitHubRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubRepository.swift; path = State/GitHubRepository.swift; sourceTree = "<group>"; };
 		7C1472B81DF651170053C7FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		7C1472B91DF651170053C7FC /* RepositoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoriesViewController.swift; path = ViewControllers/RepositoriesViewController.swift; sourceTree = "<group>"; };
 		7C1472BA1DF651170053C7FC /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryDetailViewController.swift; path = ViewControllers/RepositoryDetailViewController.swift; sourceTree = "<group>"; };
 		7C1472C11DF6512A0053C7FC /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryTableViewCell.swift; path = Views/RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		7C1472D31DF6A9EE0053C7FC /* Defines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
 		7C1472D71DF6CCD30053C7FC /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingIndicatorView.swift; path = Views/LoadingIndicatorView.swift; sourceTree = "<group>"; };
-		7C7793891DF7F49F00B27C5B /* RxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewController.swift; sourceTree = "<group>"; };
+		7C3E4F011DF95893009A5A54 /* RxTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxTableViewController.swift; path = ViewControllers/RxTableViewController.swift; sourceTree = "<group>"; };
+		7C3E4F031DF958DB009A5A54 /* LoggingMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggingMiddleware.swift; path = Middlewares/LoggingMiddleware.swift; sourceTree = "<group>"; };
+		7C3E4F041DF958DB009A5A54 /* PersistenceMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersistenceMiddleware.swift; path = Middlewares/PersistenceMiddleware.swift; sourceTree = "<group>"; };
+		7C3E4F081DF9590A009A5A54 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Database.swift; path = Persistence/Database.swift; sourceTree = "<group>"; };
+		7C3E4F0C1DF967E9009A5A54 /* Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
+		7C3E4F0E1DF971A8009A5A54 /* LaunchActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchActions.swift; sourceTree = "<group>"; };
 		7C77938B1DF7F77900B27C5B /* TokenConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenConfiguration.swift; path = State/TokenConfiguration.swift; sourceTree = "<group>"; };
-		7C7793941DF8193800B27C5B /* LoggingMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingMiddleware.swift; sourceTree = "<group>"; };
-		7C7793961DF81B6300B27C5B /* PersistenceMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceMiddleware.swift; sourceTree = "<group>"; };
 		A403276758BD11AF04D3C4B4 /* Pods-rx.redux.github-browser-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rx.redux.github-browser-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rx.redux.github-browser-example/Pods-rx.redux.github-browser-example.debug.xcconfig"; sourceTree = "<group>"; };
 		B8AAE1B765DBA6CA4BA01158 /* Pods_rx_redux_github_browser_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rx_redux_github_browser_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52A114EB0AEC020BC26BFF0 /* Pods-rx.redux.github-browser-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rx.redux.github-browser-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-rx.redux.github-browser-example/Pods-rx.redux.github-browser-example.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 				7C1472BF1DF6511D0053C7FC /* Views */,
 				7C1472B61DF651060053C7FC /* ViewControllers */,
 				7C1472A61DF650C60053C7FC /* Services */,
+				7C3E4F071DF958EE009A5A54 /* Persistence */,
 				7C14729F1DF650AD0053C7FC /* Routes */,
 				7C7793931DF818FC00B27C5B /* Middlewares */,
 				7C1472AB1DF650F80053C7FC /* State */,
@@ -158,6 +165,7 @@
 			children = (
 				7C14728D1DF6506F0053C7FC /* AuthenticationActions.swift */,
 				7C14728F1DF6506F0053C7FC /* RepositoryActions.swift */,
+				7C3E4F0E1DF971A8009A5A54 /* LaunchActions.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -203,8 +211,8 @@
 			children = (
 				7C1472AC1DF651020053C7FC /* AppState.swift */,
 				7C1472AD1DF651020053C7FC /* AuthenticationState.swift */,
+				7C1472B01DF651020053C7FC /* GitHubRepository.swift */,
 				7C1472AF1DF651020053C7FC /* ItemSection.swift */,
-				7C1472B01DF651020053C7FC /* Repository.swift */,
 				7C77938B1DF7F77900B27C5B /* TokenConfiguration.swift */,
 			);
 			name = State;
@@ -216,7 +224,7 @@
 				7C1472B81DF651170053C7FC /* LoginViewController.swift */,
 				7C1472B91DF651170053C7FC /* RepositoriesViewController.swift */,
 				7C1472BA1DF651170053C7FC /* RepositoryDetailViewController.swift */,
-				7C7793891DF7F49F00B27C5B /* RxTableViewController.swift */,
+				7C3E4F011DF95893009A5A54 /* RxTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -230,11 +238,20 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		7C3E4F071DF958EE009A5A54 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				7C3E4F081DF9590A009A5A54 /* Database.swift */,
+				7C3E4F0C1DF967E9009A5A54 /* Codable.swift */,
+			);
+			name = Persistence;
+			sourceTree = "<group>";
+		};
 		7C7793931DF818FC00B27C5B /* Middlewares */ = {
 			isa = PBXGroup;
 			children = (
-				7C7793941DF8193800B27C5B /* LoggingMiddleware.swift */,
-				7C7793961DF81B6300B27C5B /* PersistenceMiddleware.swift */,
+				7C3E4F031DF958DB009A5A54 /* LoggingMiddleware.swift */,
+				7C3E4F041DF958DB009A5A54 /* PersistenceMiddleware.swift */,
 			);
 			name = Middlewares;
 			sourceTree = "<group>";
@@ -274,6 +291,7 @@
 				TargetAttributes = {
 					7C14725C1DF64B750053C7FC = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = HW5DBD4JA4;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
@@ -371,28 +389,31 @@
 			files = (
 				7C1472BC1DF651170053C7FC /* LoginViewController.swift in Sources */,
 				7C1472BD1DF651170053C7FC /* RepositoriesViewController.swift in Sources */,
-				7C77938A1DF7F49F00B27C5B /* RxTableViewController.swift in Sources */,
 				7C1472B41DF651020053C7FC /* ItemSection.swift in Sources */,
 				7C1472BE1DF651170053C7FC /* RepositoryDetailViewController.swift in Sources */,
 				7C14729E1DF650AA0053C7FC /* RepositoryReducer.swift in Sources */,
 				7C1472961DF650990053C7FC /* NavigationControllerExtensions.swift in Sources */,
+				7C3E4F0F1DF971A8009A5A54 /* LaunchActions.swift in Sources */,
 				7C1472D81DF6CCD30053C7FC /* LoadingIndicatorView.swift in Sources */,
 				7C1472B21DF651020053C7FC /* AuthenticationState.swift in Sources */,
 				7C1472A41DF650B90053C7FC /* RepositoriesViewRoutable.swift in Sources */,
 				7C1472B11DF651020053C7FC /* AppState.swift in Sources */,
 				7C1472831DF64C110053C7FC /* AppDelegate.swift in Sources */,
 				7C1472901DF6506F0053C7FC /* AuthenticationActions.swift in Sources */,
-				7C1472B51DF651020053C7FC /* Repository.swift in Sources */,
-				7C7793951DF8193800B27C5B /* LoggingMiddleware.swift in Sources */,
-				7C7793971DF81B6300B27C5B /* PersistenceMiddleware.swift in Sources */,
+				7C1472B51DF651020053C7FC /* GitHubRepository.swift in Sources */,
+				7C3E4F061DF958DB009A5A54 /* PersistenceMiddleware.swift in Sources */,
+				7C3E4F0D1DF967E9009A5A54 /* Codable.swift in Sources */,
+				7C3E4F021DF95893009A5A54 /* RxTableViewController.swift in Sources */,
 				7C77938C1DF7F77900B27C5B /* TokenConfiguration.swift in Sources */,
 				7C1472A31DF650B90053C7FC /* LoginViewRoutable.swift in Sources */,
 				7C1472921DF6506F0053C7FC /* RepositoryActions.swift in Sources */,
 				7C1472971DF650990053C7FC /* TableViewExtensions.swift in Sources */,
 				7C1472A51DF650B90053C7FC /* RootViewRoutable.swift in Sources */,
+				7C3E4F051DF958DB009A5A54 /* LoggingMiddleware.swift in Sources */,
 				7C1472A91DF650D60053C7FC /* AuthenticationService.swift in Sources */,
 				7C14729C1DF650AA0053C7FC /* AuthenticationReducer.swift in Sources */,
 				7C1472D41DF6A9EE0053C7FC /* Defines.swift in Sources */,
+				7C3E4F091DF9590A009A5A54 /* Database.swift in Sources */,
 				7C1472C31DF6512A0053C7FC /* RepositoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,7 +532,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = HW5DBD4JA4;
 				INFOPLIST_FILE = "rx.redux.github-browser-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ChuCuoi.rx-redux-github-browser-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,7 +550,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = HW5DBD4JA4;
 				INFOPLIST_FILE = "rx.redux.github-browser-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ChuCuoi.rx-redux-github-browser-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";

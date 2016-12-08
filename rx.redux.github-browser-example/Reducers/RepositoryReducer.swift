@@ -8,7 +8,6 @@
 
 import RxRedux
 import RxReduxRouter
-import Octokit
 
 struct RepositoryReducer: Reducer
 {

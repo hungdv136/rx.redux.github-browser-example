@@ -9,7 +9,6 @@
 import UIKit
 import RxRedux
 import RxReduxRouter
-import Octokit
 import RxSwift
 import RxCocoa
 import RxDataSources
@@ -33,7 +32,7 @@ final class RepositoriesViewController: RxTableViewController {
             return cell
         }
         
-        tableView.rx.modelSelected(Repository.self).subscribe(onNext: { repository in
+        tableView.rx.modelSelected(GitHubRepository.self).subscribe(onNext: { repository in
             let newRoute = [mainViewRoute, repositoryDetailRoute]
             store.dispatch(NavigationActions.setRouteSpecificData(route: newRoute, data: repository))
             store.dispatch(NavigationActions.setRouteAction(route: newRoute, animated: true))
@@ -52,10 +51,10 @@ final class RepositoriesViewController: RxTableViewController {
             self?.updateLoadingActivity(showActivity: isFetching)
         }).addDisposableTo(disposeBag)
         
-        Driver.combineLatest(searchBar.rx.text.asDriver(), store.state.map{ $0.repositories }) { (text, repositories) -> [Repository] in
+        Driver.combineLatest(searchBar.rx.text.asDriver(), store.state.map{ $0.repositories }) { (text, repositories) -> [GitHubRepository] in
             guard let text = text, !text.isEmpty else { return repositories}
             return repositories.filter { $0.name?.localizedCaseInsensitiveContains(text) ?? false }
-        }.map { [ItemSection<Repository>(header: "" , items: $0)] }
+        }.map { [ItemSection<GitHubRepository>(header: "" , items: $0)] }
         .drive(tableView.rx.items(dataSource: dataSource)).addDisposableTo(disposeBag)
     }
     
@@ -69,6 +68,6 @@ final class RepositoriesViewController: RxTableViewController {
 
     // MARK: Properties
     
-    private lazy var dataSource = RxTableViewSectionedReloadDataSource<ItemSection<Repository>>()
+    private lazy var dataSource = RxTableViewSectionedReloadDataSource<ItemSection<GitHubRepository>>()
     private lazy var repositoryActionCreator = RepositoryActionCreator()
 }

@@ -9,9 +9,12 @@
 import UIKit
 import RxRedux
 import RxReduxRouter
+import CoreData
 
 private let reducer = CombinedReducer(reducers: NavigationReducer<AppState>(), AuthenticationReducer(), RepositoryReducer())
-let store = Store<AppState>(state: AppState(), reducer: reducer, middlewares: [ThunkMiddleware(), LoggingMiddleware()])
+private let middlewares: [Middleware] = [ThunkMiddleware(), LoggingMiddleware(), PersistenceMiddleware(database: Database())]
+
+let store = Store<AppState>(state: AppState(), reducer: reducer, middlewares: middlewares)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         store.dispatch(AuthenticationAction.initializeGitHubConfigurations)
+        store.dispatch(LaunchActions.initialize)
         
         if let authState = store.getState().authenticationState, case .loggedIn(_) = authState.loggedInState {
             store.dispatch(NavigationActions.setRouteAction(route: [mainViewRoute], animated: true))
@@ -47,5 +51,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         store.dispatch(AuthenticateActionCreator().handleOpenURL(url: url))
         return false
     }
-
 }

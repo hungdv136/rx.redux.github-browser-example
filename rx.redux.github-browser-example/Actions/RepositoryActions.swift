@@ -12,7 +12,7 @@ import RxReduxRouter
 import Octokit
 
 enum RepositoryAction: Action {
-    case setRepostories(repositories: [Repository])
+    case setRepostories(repositories: [GitHubRepository])
     case startFetching
     case endFetching
 }
@@ -35,8 +35,9 @@ struct RepositoryActionCreator {
                     completion?(error)
                     
                 case .success(let repositories):
+                    let repos = repositories.map { GitHubRepository(id: $0.id, name: $0.name, htmlURL: $0.htmlURL) }
                     DispatchQueue.main.async {
-                        _ = dispatch(RepositoryAction.setRepostories(repositories: repositories))
+                        _ = dispatch(RepositoryAction.setRepostories(repositories: repos))
                     }
                     completion?(nil)
                 }

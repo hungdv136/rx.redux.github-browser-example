@@ -9,6 +9,7 @@ target 'rx.redux.github-browser-example' do
     pod 'OctoKit.swift'
     pod 'SAMKeychain'
     pod 'PureLayout'
+    pod 'YapDatabase'
 end
 
 post_install do |installer|

@@ -8,7 +8,6 @@
 
 import RxRedux
 import RxReduxRouter
-import Octokit
 
 struct AppState: StateType, HasNavigationState {
     
@@ -16,7 +15,7 @@ struct AppState: StateType, HasNavigationState {
     
     var authenticationState: AuthenticationState? = nil
     var navigationState = NavigationState()
-    var repositories = [Repository]()
+    var repositories = [GitHubRepository]()
     
     
     // MARK: UI State
@@ -24,3 +23,15 @@ struct AppState: StateType, HasNavigationState {
     var isFectchingRepositories = false
 }
 
+extension AppState: Codable {
+    init?(coder: NSCoder) {
+        if let helpers = coder.decodeObject(forKey: "repositories") as? [CoderHelper<GitHubRepository>] {
+            repositories = helpers.flatMap { $0.object }
+        }
+    }
+    
+    public func encode(with coder: NSCoder) {
+        let helpers = repositories.map { CoderHelper(object: $0) }
+        coder.encode(helpers, forKey: "repositories")
+    }
+}

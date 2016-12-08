@@ -8,10 +8,9 @@
 
 import RxRedux
 import RxReduxRouter
-import Octokit
 
 final class RepositoryTableViewCell: UITableViewCell {
-    var model: Repository? {
+    var model: GitHubRepository? {
         didSet {
             self.textLabel!.text = model?.name ?? ""
         }

@@ -9,7 +9,6 @@
 import UIKit
 import RxRedux
 import RxReduxRouter
-import Octokit
 import RxSwift
 import RxCocoa
 
@@ -40,7 +39,7 @@ final class RepositoryDetailViewController: UIViewController {
     }
     
     private func setupDataBinding() {
-        store.state.map { state -> Repository? in
+        store.state.map { state -> GitHubRepository? in
             state.navigationState.getRouteSpecificState(state.navigationState.route)
         }.distinctUntilChanged(==).drive(onNext: { [weak self] repository in
             self?.title = repository?.name ?? ""

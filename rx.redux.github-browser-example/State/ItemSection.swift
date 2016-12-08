@@ -1,5 +1,5 @@
 //
-//  Repository.swift
+//  ItemSection.swift
 //  rx.redux.github-browser-example
 //
 //  Created by Hung Dinh on 12/02/16.
