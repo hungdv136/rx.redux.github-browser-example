@@ -15,10 +15,10 @@ struct AuthenticateActionCreator {
         return { getState, dispatch in
             guard let state = getState() as? AppState, let config = state.authenticationState?.oAuthConfig else { return }
             
-            let url = config.authenticate()
+            let authResult = config.authenticate()
             
-            if let url = url {
-                _ = dispatch(AuthenticationAction.setOAuthURL(oAuthUrl: url))
+            if let authResult = authResult {
+                _ = dispatch(AuthenticationAction.setOAuthURL(oAuthUrl: authResult))
                 _ = dispatch(NavigationActions.setRouteAction(route: [loginRoute, oAuthRoute], animated: true))
             }
         }

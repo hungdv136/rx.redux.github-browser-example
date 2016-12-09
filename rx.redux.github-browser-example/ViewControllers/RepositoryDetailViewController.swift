@@ -24,8 +24,8 @@ final class RepositoryDetailViewController: UIViewController {
         super.didMove(toParentViewController: parent)
         guard parent == nil else  { return  }
         
-        // Required to update the route, when this VC was dismissed through back button from
-        // NavigationController, since we can't intercept the back button
+        // Required to update the route, when this VC was dismissed through back button from NavigationController, 
+        // since we can't intercept the back button
         if store.getState().navigationState.route == [mainViewRoute, repositoryDetailRoute] {
             store.dispatch(NavigationActions.setRouteAction(route: [mainViewRoute], animated: true))
         }
@@ -39,11 +39,14 @@ final class RepositoryDetailViewController: UIViewController {
     }
     
     private func setupDataBinding() {
-        store.state.map { state -> GitHubRepository? in
-            state.navigationState.getRouteSpecificState(state.navigationState.route)
+        store.state.flatMap {
+            guard let repo: GitHubRepository = $0.navigationState.getRouteSpecificState($0.navigationState.route) else {
+                return Driver.empty()
+            }
+            return Driver.just(repo)
         }.distinctUntilChanged(==).drive(onNext: { [weak self] repository in
-            self?.title = repository?.name ?? ""
-            if let url = repository?.htmlURL.flatMap({URL.init(string: $0)}) {
+            self?.title = repository.name ?? ""
+            if let url = repository.htmlURL.flatMap({URL.init(string: $0)}) {
                 self?.webView.loadRequest(URLRequest(url: url))
             }
         }).addDisposableTo(disposeBag)
