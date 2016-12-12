@@ -1,1 +1,1 @@
-#A real world example for Redux and ReactiveX in Swift
+#A real world example for using Redux and ReactiveX in Swift
